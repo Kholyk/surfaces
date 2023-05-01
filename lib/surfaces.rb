@@ -1,15 +1,15 @@
 # frozen_string_literal: true
 
-require_relative 'surfaces/version'
-require_relative 'surfaces/primitive'
+require_relative "surfaces/version"
+require_relative "surfaces/primitive"
 
+# Calculates area for surfaces
 module Surfaces
   class Error < StandardError; end
 
   include Primitive
 
   def self.parallelogram(width, height, depth, include_inner: false)
-
     area = Primitive.rectangle(width, height) + Primitive.rectangle(width, depth) + Primitive.rectangle(height, depth)
     include_inner ? area * 4 : area * 2
   end
@@ -24,5 +24,4 @@ module Surfaces
 
     include_inner ? result * 2 : result
   end
-
 end

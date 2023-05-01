@@ -2,23 +2,24 @@
 
 require "bigdecimal/util"
 
+# Areas of primitives
 module Primitive
   def self.rectangle(width, height, source_unit: :mm, destination_unit: :m)
     converted_width = convert(width, source_unit, destination_unit)
     converted_height = convert(height, source_unit, destination_unit)
 
     converted_height * converted_width
-    end
+  end
 
   def self.circle(diameter, source_unit: :mm, destination_unit: :m)
     converted_diameter = convert(diameter, source_unit, destination_unit)
     Math::PI * converted_diameter**2 / 4
   end
 
-  def self.triangle_heron(a, b, c, source_unit: :mm, destination_unit: :m)
-    converted_a = convert a, source_unit: source_unit, destination_unit: destination_unit
-    converted_b = convert b, source_unit: source_unit, destination_unit: destination_unit
-    converted_c = convert c, source_unit: source_unit, destination_unit: destination_unit
+  def self.triangle_heron(side_a, side_b, side_c, source_unit: :mm, destination_unit: :m)
+    converted_a = convert side_a, source_unit, destination_unit
+    converted_b = convert side_b, source_unit, destination_unit
+    converted_c = convert side_c, source_unit, destination_unit
 
     half_perimeter = (converted_a + converted_b + converted_a) / 2
 

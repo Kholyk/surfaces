@@ -5,8 +5,9 @@ require "test_helper"
 class TestSurfaces < Minitest::Test
   def setup
     @box = { width: 1000, height: 1000, depth: 1000 }
-    @cyl= { diameter: 133, height: 940 }
+    @cyl = { diameter: 133, height: 940 }
   end
+
   def test_that_it_has_a_version_number
     refute_nil ::Surfaces::VERSION
   end
