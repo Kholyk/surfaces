@@ -1,3 +1,5 @@
+[![Ruby](https://github.com/Kholyk/surfaces/actions/workflows/main.yml/badge.svg)](https://github.com/Kholyk/surfaces/actions/workflows/main.yml)
+
 # Surfaces
 
 TODO: Delete this and the text below, and describe your gem
